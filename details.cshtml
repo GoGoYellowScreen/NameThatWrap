@@ -1,0 +1,24 @@
+@using NameThatWrap.Models;
+
+@model WrapModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Name That Wrap</title>
+    <meta name="description" content="How well do you know woven wraps? Test your ability to identify the colorways of popular brands with quiz.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="quiz" style="background:url(../img/@Model.ImgName) no-repeat center center fixed;">
+    <div id="wrap">
+        <h1>@Model.Colorway</h1>
+    </div><!--end wrap div-->
+</body>
+</html>
