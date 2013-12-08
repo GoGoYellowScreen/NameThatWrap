@@ -137,6 +137,14 @@ button {
 	text-align: center;
 }
 
+#colorway-list li {
+    margin: 20px;
+}
+
+#colorway-list p {
+    margin: 20px;
+}
+
 /*---------------------responsive---------------------*/
 
 @media only screen and (min-width: 600px) {
