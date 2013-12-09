@@ -1,0 +1,17 @@
+@using NameThatWrap.Models
+@model SignInModel
+
+@{
+    ViewBag.Title = "SignIn";
+}
+
+<div>
+    @using(Html.BeginForm("SignIn", "Account"))
+    {
+        @Html.ValidationSummary();
+        @Html.TextBoxFor(m => m.UserName); <br/>
+        @Html.PasswordFor(m => m.Password); <br/>
+        <input type="submit" value="Submit" />
+        
+    }
+</div>
