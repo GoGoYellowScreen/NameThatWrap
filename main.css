@@ -16,35 +16,35 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+        display: block;
 }
 body {
-	line-height: 1;
+        line-height: 1;
 }
 ol, ul {
-	list-style: none;
+        list-style: none;
 }
 blockquote, q {
-	quotes: none;
+        quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+        content: '';
+        content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
 }
 
 /*---------------------custom syles---------------------*/
@@ -59,90 +59,104 @@ body {
 }
 
 .quiz {
-	background: url(../img/helsinki.jpg) no-repeat center center fixed; 
-	  -webkit-background-size: cover;
+        background: no-repeat center center fixed; 
+          -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
 h1 {
-	font-size: 50px;
-		-webkit-transition: font-size 0.5s ease;
+        font-size: 50px;
+                -webkit-transition: font-size 0.5s ease;
     -moz-transition: font-size 0.5s ease;
     -o-transition: font-size 0.5s ease;
     transition: font-size 0.5s ease;
-	line-height: 1.5;
-	color: #fff;
-	width: 80%;
-	margin: 20px auto;
-	text-align: center;
-	padding: 50px;
+        line-height: 1.5;
+        color: #fff;
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+        padding: 50px;
 
 }
 
 #title {
-	color: #000;
+        color: #000;
 }
 
 #title span {
-	display: block;
+        display: block;
 }
 
 #log-in {
-	/*background: #000000;
-	opacity: .5;*/
-	/*background: rgba(0, 0, 0, 0.5);*/
-	padding: 20px;
-	max-width: 300px;
-	margin: 0 auto;
+        /*background: #000000;
+        opacity: .5;*/
+        /*background: rgba(0, 0, 0, 0.5);*/
+        padding: 20px;
+        max-width: 300px;
+        margin: 0 auto;
 }
 
 label {
-	display: block;
-	color: #4F4F4F;
-	color: #000;
-	/*float: left;
-	text-align: right;*/
-	font-size: 1.25em;
-	padding-top: 10px;
+        display: block;
+        color: #4F4F4F;
+        color: #000;
+        /*float: left;
+        text-align: right;*/
+        font-size: 1.25em;
+        padding-top: 10px;
 }
 
 input {
-	background: rgba(255,255,255,0.15);
-	border: solid 1px black;
+        background: rgba(255,255,255,0.15);
+        border: solid 1px black;
 
 }
 
 button {
-	margin: 15px 0;
-	display: block;
-	font-size: 1.25em;
-	color: #4F4F4F;
-	color: #000;
-	/*background-color: #EFEFEF;*/
-	background: rgba(255,255,255,0.15);
-	border: solid 1px black;
+        margin: 15px 0;
+        display: block;
+        font-size: 1.25em;
+        color: #4F4F4F;
+        color: #000;
+        /*background-color: #EFEFEF;*/
+        background: rgba(255,255,255,0.15);
+        border: solid 1px black;
 }
 
 #wrap p {
-	font-size: 50px;
-		-webkit-transition: font-size 0.5s ease;
+        font-size: 50px;
+                -webkit-transition: font-size 0.5s ease;
     -moz-transition: font-size 0.5s ease;
     -o-transition: font-size 0.5s ease;
     transition: font-size 0.5s ease;
-	color: #fff;
-	width: 80%;
-	margin: 0 auto;
-	text-align: center;
+        color: #fff;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+}
+
+#colorway-list {
+    color: #fff;
 }
 
 #colorway-list li {
     margin: 20px;
+    font-size: 36px;
 }
 
 #colorway-list p {
-    margin: 20px;
+    margin: 20px 20px 70px;
+    font-size: 20px;
+}
+
+a:link, a:visited {
+    color: #fff;
+}
+
+a:active, a:hover {
+    color: #f10a89;
 }
 
 /*---------------------responsive---------------------*/
@@ -150,35 +164,35 @@ button {
 @media only screen and (min-width: 600px) {
 
 h1 {
-	font-size: 100px;
-	line-height: 1.25;
+        font-size: 100px;
+        line-height: 1.25;
 }
 
 #title span {
-	display: inline;
+        display: inline;
 }
 
 #log-in {
-	padding: 20px;
-	max-width: 300px;
-	float: right;
-	margin-top: 50px;
-	margin-right: 50px;
+        padding: 20px;
+        max-width: 300px;
+        float: right;
+        margin-top: 50px;
+        margin-right: 50px;
 }
 
 label {
-	display: block;
-	/*float: left;
-	text-align: right;*/
-	font-size: 1.5em;
+        display: block;
+        /*float: left;
+        text-align: right;*/
+        font-size: 1.5em;
 }
 
 button {
-	font-size: 1.5em;
+        font-size: 1.5em;
 }
 
 #wrap p {
-	font-size: 100px;
+        font-size: 100px;
 }
 
 }
