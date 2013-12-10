@@ -1,0 +1,33 @@
+@using NameThatWrap.Models
+@model SuggestionModel
+
+@{
+    ViewBag.Title="Suggestion";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Suggestion</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+    <div class="form">
+        <h3>Do you know of a wrap we should add to the game?</h3><br />
+        <p id="tellus">Tell us!</p><br/>
+
+        @using (Html.BeginForm("Suggestion", "Feedback"))
+        {
+            @Html.ValidationSummary();
+            <label>Brand:</label> @Html.TextBoxFor(m => m.Brand); <br />
+            <label>Colorway:</label> @Html.TextBoxFor(m => m.SuggestColorway); <br />
+            <label>Link to the image:</label> @Html.TextBoxFor(m => m.ImgLink); <br />
+            <input type="submit" value="Submit" />
+
+        }
+
+    </div>
+</body>
+</html>
