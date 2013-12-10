@@ -66,6 +66,15 @@ body {
   background-size: cover;
 }
 
+
+a:link, a:visited {
+    color: #fff;
+}
+
+a:active, a:hover {
+    color: #f10a89;
+}
+
 h1 {
         font-size: 50px;
                 -webkit-transition: font-size 0.5s ease;
@@ -98,31 +107,10 @@ h1 {
         margin: 0 auto;
 }
 
-label {
-        display: block;
-        color: #4F4F4F;
-        color: #000;
-        /*float: left;
-        text-align: right;*/
-        font-size: 1.25em;
-        padding-top: 10px;
-}
-
 input {
         background: rgba(255,255,255,0.15);
         border: solid 1px black;
 
-}
-
-button {
-        margin: 15px 0;
-        display: block;
-        font-size: 1.25em;
-        color: #4F4F4F;
-        color: #000;
-        /*background-color: #EFEFEF;*/
-        background: rgba(255,255,255,0.15);
-        border: solid 1px black;
 }
 
 #wrap p {
@@ -151,12 +139,45 @@ button {
     font-size: 20px;
 }
 
-a:link, a:visited {
-    color: #fff;
+.form {
+    margin: 20px;
 }
 
-a:active, a:hover {
-    color: #f10a89;
+.form p {
+    font-size: 24px;
+    margin: 20px 20px 40px;
+}
+
+.form a:link, .form a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+.form a:active, .form a:hover {
+    color: #00FFFF;
+    text-decoration: none;
+}
+
+.fauxbutton {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.form h3 {
+    font-size: 20px;
+}
+
+#tellus {
+    font-size: 20px;
+    margin: 0;
+}
+
+label {
+    font-size: 16px;
+    float: left;
+	text-align: right;
+	margin-right: 15px;
+	width: 130px;
 }
 
 /*---------------------responsive---------------------*/
@@ -178,17 +199,6 @@ h1 {
         float: right;
         margin-top: 50px;
         margin-right: 50px;
-}
-
-label {
-        display: block;
-        /*float: left;
-        text-align: right;*/
-        font-size: 1.5em;
-}
-
-button {
-        font-size: 1.5em;
 }
 
 #wrap p {
