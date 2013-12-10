@@ -20,6 +20,12 @@ namespace NameThatWrap
             );
 
             routes.MapRoute(
+                name: "FeedbackRoute",
+                 url: "feedback/{action}",
+                 defaults: new { controller = "Feedback", action = "Suggestion" }
+);
+
+            routes.MapRoute(
                 name: "WrapRoute",
                 url: "content/Details",
                 defaults: new { controller = "Home", action = "Details" }
