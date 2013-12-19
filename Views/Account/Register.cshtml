@@ -1,0 +1,31 @@
+﻿@using NameThatWrap.Models
+@model RegisterModel
+
+@{
+    ViewBag.Title="Register";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+    <div class="form">
+        <h3>Register:</h3><br/>
+        @using(Html.BeginForm("Register", "Account"))
+        {
+            @Html.ValidationSummary()
+            <label>First Name:</label> @Html.TextBoxFor(m => m.FirstName) @Html.ValidationMessageFor(m => m.FirstName) <br/>
+            <label>Last Name:</label> @Html.TextBoxFor(m => m.LastName) @Html.ValidationMessageFor(m => m.LastName) <br/>
+            <label>Email:</label> @Html.TextBoxFor(m => m.Email) @Html.ValidationMessageFor(m => m.Email) <br/>
+            <label>User Name:</label> @Html.TextBoxFor(m => m.Username) @Html.ValidationMessageFor(m => m.Username) <br/>
+            <label>Password:</label> @Html.TextBoxFor(m => m.Password) @Html.ValidationMessageFor(m => m.Password) <br/>
+            <input type="submit" value="Register!"/>
+        }
+    </div>
+</body>
+</html>
