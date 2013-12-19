@@ -12,7 +12,7 @@ namespace NameThatWrap.Models
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
-        [Phone]
+        [Required]
         public string Username { get; set; }
         [EmailAddress]
         public string Email { get; set; }

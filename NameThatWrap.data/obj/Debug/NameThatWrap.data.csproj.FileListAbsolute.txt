@@ -1,0 +1,8 @@
+C:\src\NameThatWrap\NameThatWrap.data\obj\Debug\NameThatWrap.data.csprojResolveAssemblyReference.cache
+C:\src\NameThatWrap\NameThatWrap.data\bin\Debug\NameThatWrap.data.dll.config
+C:\src\NameThatWrap\NameThatWrap.data\bin\Debug\NameThatWrap.data.dll
+C:\src\NameThatWrap\NameThatWrap.data\bin\Debug\NameThatWrap.data.pdb
+C:\src\NameThatWrap\NameThatWrap.data\bin\Debug\EntityFramework.dll
+C:\src\NameThatWrap\NameThatWrap.data\bin\Debug\EntityFramework.xml
+C:\src\NameThatWrap\NameThatWrap.data\obj\Debug\NameThatWrap.data.dll
+C:\src\NameThatWrap\NameThatWrap.data\obj\Debug\NameThatWrap.data.pdb

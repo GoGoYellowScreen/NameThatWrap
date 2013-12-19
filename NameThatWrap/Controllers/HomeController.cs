@@ -34,11 +34,16 @@ namespace NameThatWrap.Controllers
             WrapModel myWrap3 = GetWrap(3);
             myNewVar.WrapList.Add(myWrap3);
 
+            WrapModel myWrap4 = GetWrap(4);
+            myNewVar.WrapList.Add(myWrap4);
+
             return View(myNewVar);
     }
 
         private WrapModel GetWrap (int wrapID)
         {
+            NameThatWrapEntities entities = new NameThatWrapEntities();
+            
             WrapModel myWrap = new WrapModel();
             switch(wrapID)
             {
@@ -56,6 +61,12 @@ namespace NameThatWrap.Controllers
                     myWrap.WrapID = 3;
                     myWrap.ImgName = "rainbowwrap.jpg";
                     myWrap.Colorway = "Earthy Rainbow";
+                    break;
+
+                case 4:
+                    myWrap.WrapID = 4;
+                    myWrap.ImgName = "oschamexicachico.jpg";
+                        myWrap.Colorway = "Mexica Xica";
                     break;
             }
             return myWrap;

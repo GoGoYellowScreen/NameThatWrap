@@ -19,6 +19,12 @@
 </head>
 <body>
     <div>
+        @* @if (Model.LoggedIn == true) *@
+        {
+            <span>Hello, Welcome @Session["name"]!</span>
+        }
+    </div>
+    <div>
         <ul id="colorway-list">
 
             @foreach(WrapModel wm in Model.WrapList)

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NameThatWrapModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="NameThatWrapEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Comments" EntityType="NameThatWrapModel.Comment" />
+    <EntitySet Name="Wraps" EntityType="NameThatWrapModel.Wrap" />
+  </EntityContainer>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="comment_Id" />
+    </Key>
+    <Property Name="comment_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="date_updated" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Author" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="article_id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Wrap">
+    <Key>
+      <PropertyRef Name="wrap_Id" />
+    </Key>
+    <Property Name="wrap_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="colorway" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="brand" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="date_updated" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="author" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="img_name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
