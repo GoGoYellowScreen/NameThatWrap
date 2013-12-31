@@ -20,10 +20,10 @@ namespace NameThatWrap.Controllers
         }
 
         public ActionResult WrapList()
-    {
-        WrapListModel myNewVar = new WrapListModel();
+        {
+            WrapListModel myNewVar = new WrapListModel();
 
-        myNewVar.WrapList = new List<WrapModel>();
+            myNewVar.WrapList = new List<WrapModel>();
 
             WrapModel myWrap = GetWrap(1);
             myNewVar.WrapList.Add(myWrap);
@@ -36,6 +36,9 @@ namespace NameThatWrap.Controllers
 
             WrapModel myWrap4 = GetWrap(4);
             myNewVar.WrapList.Add(myWrap4);
+
+            WrapModel myWrap5 = GetWrap(5);
+            myNewVar.WrapList.Add(myWrap5);
 
             return View(myNewVar);
     }
@@ -67,6 +70,12 @@ namespace NameThatWrap.Controllers
                     myWrap.WrapID = 4;
                     myWrap.ImgName = "oschamexicachico.jpg";
                         myWrap.Colorway = "Mexica Xica";
+                    break;
+
+                case 5:
+                    myWrap.WrapID = 5;
+                    myWrap.ImgName = "zauberwald.jpg";
+                    myWrap.Colorway = "Mystic Forest";
                     break;
             }
             return myWrap;

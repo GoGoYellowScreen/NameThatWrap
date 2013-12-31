@@ -6,3 +6,13 @@ C:\src\NameThatWrap\NameThatWrap.data\bin\Debug\EntityFramework.dll
 C:\src\NameThatWrap\NameThatWrap.data\bin\Debug\EntityFramework.xml
 C:\src\NameThatWrap\NameThatWrap.data\obj\Debug\NameThatWrap.data.dll
 C:\src\NameThatWrap\NameThatWrap.data\obj\Debug\NameThatWrap.data.pdb
+C:\NameThatWrap\NameThatWrap.data\bin\Debug\NameThatWrap.data.dll.config
+C:\NameThatWrap\NameThatWrap.data\bin\Debug\NameThatWrap.data.dll
+C:\NameThatWrap\NameThatWrap.data\bin\Debug\NameThatWrap.data.pdb
+C:\NameThatWrap\NameThatWrap.data\bin\Debug\EntityFramework.dll
+C:\NameThatWrap\NameThatWrap.data\bin\Debug\EntityFramework.xml
+C:\NameThatWrap\NameThatWrap.data\obj\Debug\NameThatWrap.data.csprojResolveAssemblyReference.cache
+C:\NameThatWrap\NameThatWrap.data\obj\Debug\NameThatWrap.data.dll
+C:\NameThatWrap\NameThatWrap.data\obj\Debug\NameThatWrap.data.pdb
+C:\NameThatWrap\NameThatWrap.data\bin\Debug\Newtonsoft.Json.dll
+C:\NameThatWrap\NameThatWrap.data\bin\Debug\Newtonsoft.Json.xml

@@ -33,6 +33,9 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -46,48 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comment.cs">
-      <DependentUpon>NameThatWrapContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NameThatWrapContext.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NameThatWrapContext.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NameThatWrapContext.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NameThatWrapContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NameThatWrapContext.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NameThatWrapContext.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Wrap.cs">
-      <DependentUpon>NameThatWrapContext.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="NameThatWrapContext.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NameThatWrapContext.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="NameThatWrapContext.Context.tt">
+    <EntityDeploy Include="NameThatWrap.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NameThatWrap.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="NameThatWrap.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NameThatWrapContext.edmx</DependentUpon>
-      <LastGenOutput>NameThatWrapContext.Context.cs</LastGenOutput>
+      <DependentUpon>NameThatWrap.edmx</DependentUpon>
+      <LastGenOutput>NameThatWrap.Context.cs</LastGenOutput>
     </None>
-    <None Include="NameThatWrapContext.edmx.diagram">
-      <DependentUpon>NameThatWrapContext.edmx</DependentUpon>
+    <None Include="NameThatWrap.edmx.diagram">
+      <DependentUpon>NameThatWrap.edmx</DependentUpon>
     </None>
-    <None Include="NameThatWrapContext.tt">
+    <None Include="NameThatWrap.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NameThatWrapContext.edmx</DependentUpon>
-      <LastGenOutput>NameThatWrapContext.cs</LastGenOutput>
+      <DependentUpon>NameThatWrap.edmx</DependentUpon>
+      <LastGenOutput>NameThatWrap.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -96,6 +74,29 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NameThatWrap.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NameThatWrap.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NameThatWrap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NameThatWrap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NameThatWrap.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NameThatWrap.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>NameThatWrap.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Wrap.cs">
+      <DependentUpon>NameThatWrap.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

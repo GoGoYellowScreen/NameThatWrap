@@ -17,6 +17,7 @@ namespace NameThatWrap.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult SignIn()
         {
             return View();

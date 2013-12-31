@@ -12,14 +12,12 @@ namespace NameThatWrap.data
     using System;
     using System.Collections.Generic;
     
-    public partial class Comment
+    public partial class User
     {
-        public int comment_Id { get; set; }
-        public string Title { get; set; }
-        public string Body { get; set; }
-        public System.DateTime date_created { get; set; }
-        public System.DateTime date_updated { get; set; }
-        public string Author { get; set; }
-        public string article_id { get; set; }
+        public int UserId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

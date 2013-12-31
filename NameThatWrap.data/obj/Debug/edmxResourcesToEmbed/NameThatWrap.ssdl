@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NameThatWrapModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Wrap">
+    <Key>
+      <PropertyRef Name="WrapID" />
+    </Key>
+    <Property Name="WrapID" Type="int" Nullable="false" />
+    <Property Name="Colorway" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ImgName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date_created" Type="datetime2" Precision="7" />
+    <Property Name="Date_updated" Type="datetime2" Precision="7" />
+    <Property Name="Author" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="NameThatWrapModelStoreContainer">
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Wrap" EntityType="Self.Wrap" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

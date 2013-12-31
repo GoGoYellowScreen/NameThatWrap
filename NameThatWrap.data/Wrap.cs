@@ -14,12 +14,12 @@ namespace NameThatWrap.data
     
     public partial class Wrap
     {
-        public int wrap_Id { get; set; }
-        public string colorway { get; set; }
-        public string brand { get; set; }
-        public System.DateTime date_created { get; set; }
-        public System.DateTime date_updated { get; set; }
-        public string author { get; set; }
-        public string img_name { get; set; }
+        public int WrapID { get; set; }
+        public string Colorway { get; set; }
+        public string Brand { get; set; }
+        public string ImgName { get; set; }
+        public Nullable<System.DateTime> Date_created { get; set; }
+        public Nullable<System.DateTime> Date_updated { get; set; }
+        public string Author { get; set; }
     }
 }
