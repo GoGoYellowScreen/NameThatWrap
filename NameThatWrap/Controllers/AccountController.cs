@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using NameThatWrap.Models;
+using NameThatWrap.data;
 
 namespace NameThatWrap.Controllers
 {
@@ -17,6 +18,11 @@ namespace NameThatWrap.Controllers
             return View();
         }
 
+        public ActionResult WelcomeBack()
+        {
+            return View();
+        }
+
         [HttpGet]
         public ActionResult SignIn()
         {
@@ -26,14 +32,19 @@ namespace NameThatWrap.Controllers
         [HttpPost]
         public ActionResult SignIn(SignInModel model)
          {
-            bool isValid = IsValidUser(model);
-            if (!isValid)
-            {
-                ModelState.AddModelError("", "Your username or password is invalid");
+            if (!ModelState.IsValid)
                 return View(model);
+            else
+            {
+                NameThatWrapEntities context = new NameThatWrapEntities();
+                string hashedPassword = model.Password.GetHashCode().ToString();
+                User user = context.Users.Where(u => u.Email == model.Email && u.Password == hashedPassword).SingleOrDefault();
+                if (user == null)
+                    return View(model);
+                Session["logged_in"] = true;
+                Session["name"] = model.FirstName;
+                return RedirectToAction("WelcomeBack", "Account");
             }
-            else //is a valid user
-                return RedirectToAction("WrapList", "Home");
         }
 
         [HttpGet]
@@ -43,21 +54,20 @@ namespace NameThatWrap.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register(RegisterModel model)
+        public ActionResult Register(User model)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("WrapList", "Home");
+                model.Password = model.Password.GetHashCode().ToString();
+                NameThatWrapEntities context = new NameThatWrapEntities();
+                context.Users.Add(model);
+                context.SaveChanges();
+                return View("ThanksReg", model);
             }
-            return View(model);
-        }
-
-        private bool IsValidUser(SignInModel model)
-        {
-            //DATABASE WOULD DO THIS NORMALLY
-            if(model.UserName == "Kathy" && model.Password == "password")
-                return true;
-            return false;
+            else
+            {
+                return View(model);
+            }
         }
 
     }

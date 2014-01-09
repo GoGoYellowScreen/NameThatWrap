@@ -1,0 +1,12 @@
+﻿@using NameThatWrap.data
+@model NameThatWrap.data.User
+
+@{
+    ViewBag.Title = "ThanksReg";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <h2>Thank you for registering, @Model.FirstName!</h2>
+    <h2><a href="@Url.Action("Home", "Level?WrapID=1")">Play the game!  >></a></h2>
+</body>

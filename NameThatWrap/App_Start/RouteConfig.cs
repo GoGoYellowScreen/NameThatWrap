@@ -23,20 +23,26 @@ namespace NameThatWrap
                 name: "FeedbackRoute",
                  url: "feedback/{action}",
                  defaults: new { controller = "Feedback", action = "Suggestion" }
-);
+            );
 
             routes.MapRoute(
                 name: "WrapRoute",
-                url: "content/Details",
-                defaults: new { controller = "Home", action = "Details" }
+                url: "content/{action}",
+                defaults: new { controller = "Home", action = "WrapList" }
             );
+
+            routes.MapRoute(
+                name: "LevelRoute",
+                url: "content/level",
+                defaults: new { controller = "Home", action = "Level"}
+                );
 
             routes.MapRoute(
                 name: "Default",
                 url: "{action}/",
-                defaults: new { controller = "Home", action = "WrapList" }
+               defaults: new { controller = "Account", action = "Index" }
                 //took out controller and id from url
-                //took out id from default, and changed action from index to wraplist
+                //took out id from default
             );
         }
     }

@@ -1,29 +1,24 @@
-﻿@using NameThatWrap.Models
+﻿@using NameThatWrap.Models;
+@using NameThatWrap.data;
+
 @model SignInModel
 
 @{
     ViewBag.Title = "SignIn";
+    Layout = "../Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Register</title>
-    <link rel="stylesheet" href="../../css/main.css">
-</head>
 <body>
     <div class="form">
-        <h3>Sign in:</h3><br />
+        <h3>Sign in:</h3>
         @using (Html.BeginForm("SignIn", "Account"))
         {
             @Html.ValidationSummary();
-            <label>User Name:</label> @Html.TextBoxFor(m => m.UserName); <br />
-            <label>Password:</label> @Html.PasswordFor(m => m.Password); <br />
+            <label>Email:</label> @Html.TextBoxFor(m => m.Email)<br/>
+            <label>Password:</label> @Html.PasswordFor(m => m.Password)<br/>
             <input type="submit" value="Sign in!" />
 
         }
     </div>
 </body>
-</html>

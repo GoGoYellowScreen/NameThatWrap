@@ -1,31 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="NameThatWrapModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="NameThatWrapEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Comments" EntityType="NameThatWrapModel.Comment" />
-    <EntitySet Name="Wraps" EntityType="NameThatWrapModel.Wrap" />
-  </EntityContainer>
-  <EntityType Name="Comment">
+  <EntityType Name="User">
     <Key>
-      <PropertyRef Name="comment_Id" />
+      <PropertyRef Name="UserId" />
     </Key>
-    <Property Name="comment_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Title" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Body" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="7" />
-    <Property Name="date_updated" Type="DateTime" Nullable="false" Precision="7" />
-    <Property Name="Author" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="article_id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
   <EntityType Name="Wrap">
     <Key>
-      <PropertyRef Name="wrap_Id" />
+      <PropertyRef Name="WrapID" />
     </Key>
-    <Property Name="wrap_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="colorway" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="brand" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="date_created" Type="DateTime" Nullable="false" Precision="7" />
-    <Property Name="date_updated" Type="DateTime" Nullable="false" Precision="7" />
-    <Property Name="author" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="img_name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WrapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Colorway" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ImgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date_created" Type="DateTime" Precision="7" />
+    <Property Name="Date_updated" Type="DateTime" Precision="7" />
+    <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityContainer Name="NameThatWrapEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Wraps" EntityType="Self.Wrap" />
+  </EntityContainer>
 </Schema>

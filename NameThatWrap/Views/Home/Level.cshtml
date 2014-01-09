@@ -1,16 +1,17 @@
 ﻿@using NameThatWrap.Models;
 @using NameThatWrap.data;
 
-@model WrapModel
 
 @{
-    ViewBag.Title = "Details"; 
+    ViewBag.Title = "Level";
     Layout = "../Shared/_Layout.cshtml";
 }
 
 
 <body class="quiz" style="background:url(../img/@Model.ImgName) no-repeat center center fixed; background-size: cover;">
     <div id="wrap">
+        <h1>@Model.Colorway</h1>
+        <p>or</p>
         <h1>@Model.Colorway</h1>
     </div><!--end wrap div-->
 </body>

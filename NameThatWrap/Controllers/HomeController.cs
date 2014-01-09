@@ -13,6 +13,12 @@ namespace NameThatWrap.Controllers
         //
         // GET: /Home/
 
+        public ActionResult Level (int wrapID)
+        {
+            WrapModel myVar = GetWrap(wrapID);
+            return View(myVar);
+        }
+
         public ActionResult Details(int wrapID)
         {
             WrapModel myVar =  GetWrap(wrapID);
@@ -45,7 +51,7 @@ namespace NameThatWrap.Controllers
 
         private WrapModel GetWrap (int wrapID)
         {
-            NameThatWrapEntities entities = new NameThatWrapEntities();
+            NameThatWrapEntities context = new NameThatWrapEntities();
             
             WrapModel myWrap = new WrapModel();
             switch(wrapID)
@@ -69,7 +75,7 @@ namespace NameThatWrap.Controllers
                 case 4:
                     myWrap.WrapID = 4;
                     myWrap.ImgName = "oschamexicachico.jpg";
-                        myWrap.Colorway = "Mexica Xica";
+                        myWrap.Colorway = "Mexica Xico";
                     break;
 
                 case 5:

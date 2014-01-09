@@ -1,29 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="NameThatWrapModelStoreContainer" CdmEntityContainer="NameThatWrapEntities">
-    <EntitySetMapping Name="Comments">
-      <EntityTypeMapping TypeName="NameThatWrapModel.Comment">
-        <MappingFragment StoreEntitySet="Comments">
-          <ScalarProperty Name="article_id" ColumnName="article_id" />
-          <ScalarProperty Name="Author" ColumnName="Author" />
-          <ScalarProperty Name="date_updated" ColumnName="date_updated" />
-          <ScalarProperty Name="date_created" ColumnName="date_created" />
-          <ScalarProperty Name="Body" ColumnName="Body" />
-          <ScalarProperty Name="Title" ColumnName="Title" />
-          <ScalarProperty Name="comment_Id" ColumnName="comment_Id" />
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="NameThatWrapModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Wraps">
       <EntityTypeMapping TypeName="NameThatWrapModel.Wrap">
         <MappingFragment StoreEntitySet="Wrap">
-          <ScalarProperty Name="img_name" ColumnName="img_name" />
-          <ScalarProperty Name="author" ColumnName="author" />
-          <ScalarProperty Name="date_updated" ColumnName="date_updated" />
-          <ScalarProperty Name="date_created" ColumnName="date_created" />
-          <ScalarProperty Name="brand" ColumnName="brand" />
-          <ScalarProperty Name="colorway" ColumnName="colorway" />
-          <ScalarProperty Name="wrap_Id" ColumnName="wrap_Id" />
+          <ScalarProperty Name="WrapID" ColumnName="WrapID" />
+          <ScalarProperty Name="Colorway" ColumnName="Colorway" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ImgName" ColumnName="ImgName" />
+          <ScalarProperty Name="Date_created" ColumnName="Date_created" />
+          <ScalarProperty Name="Date_updated" ColumnName="Date_updated" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

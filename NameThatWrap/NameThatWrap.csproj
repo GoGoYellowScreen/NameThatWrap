@@ -131,6 +131,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="img\eva.jpg" />
     <Content Include="img\helsinki.jpg" />
     <Content Include="img\hibbiewrap.jpg" />
     <Content Include="img\oschamexicachico.jpg" />
@@ -138,6 +139,9 @@
     <Content Include="img\rainbowwrap.jpg" />
     <Content Include="img\starry_night_blur.jpg" />
     <Content Include="img\zauberwald.jpg" />
+    <Content Include="Views\Home\Level.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -149,7 +153,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -177,6 +180,15 @@
       <Project>{b48ff210-175b-4563-86fd-67f233780bef}</Project>
       <Name>NameThatWrap.data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\ThanksReg.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\WelcomeBack.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

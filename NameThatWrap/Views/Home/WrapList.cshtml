@@ -1,29 +1,15 @@
 ﻿@using NameThatWrap.Models;
+@using NameThatWrap.data;
 
 @model WrapListModel
 
 @{
-    Layout = null;
+    Layout = "../Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>WrapList</title>
-    <meta name="description" content="How well do you know woven wraps? Test your ability to identify the colorways of popular brands with quiz.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="../../css/main.css">
-</head>
 <body>
-    <div>
-        @* @if (Model.LoggedIn == true) *@
-        {
-            <span>Hello, Welcome @Session["name"]!</span>
-        }
-    </div>
+
     <div>
         <ul id="colorway-list">
 
@@ -32,7 +18,7 @@
 
             <li>@wm.Colorway</li> <!--use a loop, with the li inside the loop, to go through the list-->
              
-            <p><a href="@Url.Action("Details", new {wrapID = wm.WrapID })">Yes, show it to me!!!</a></p>   
+            <p><a href="@Url.Action("Details", new {wrapID = wm.WrapID })">Click to view</a></p>   
             }
 
 
@@ -40,4 +26,3 @@
         </ul>
     </div>
 </body>
-</html>

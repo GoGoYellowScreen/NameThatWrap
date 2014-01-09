@@ -49,18 +49,19 @@ table {
 
 /*---------------------custom syles---------------------*/
 
-body { 
-  background: url(../img/starry_night_blur.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: Arial, sans-serif;
+body {
+    background: url(../img/eva.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #fff;
 }
 
 .quiz {
-        background: no-repeat center center fixed; 
-          -webkit-background-size: cover;
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
@@ -76,57 +77,57 @@ a:active, a:hover {
 }
 
 h1 {
-        font-size: 50px;
-                -webkit-transition: font-size 0.5s ease;
+   font-size: 50px;
+    -webkit-transition: font-size 0.5s ease;
     -moz-transition: font-size 0.5s ease;
     -o-transition: font-size 0.5s ease;
     transition: font-size 0.5s ease;
-        line-height: 1.5;
-        color: #fff;
-        width: 80%;
-        margin: 20px auto;
-        text-align: center;
-        padding: 50px;
+    line-height: 1.5;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    padding: 50px;
 
 }
 
-#title {
-        color: #000;
+h2 {
+    font-size: 20px;
+    margin: 20px;
 }
 
 #title span {
-        display: block;
+    display: block;
 }
 
 #log-in {
         /*background: #000000;
         opacity: .5;*/
         /*background: rgba(0, 0, 0, 0.5);*/
-        padding: 20px;
-        max-width: 300px;
-        margin: 0 auto;
+     padding: 20px;
+     max-width: 300px;
+     margin: 0 auto;
 }
 
 input {
-        background: rgba(255,255,255,0.15);
-        border: solid 1px black;
+      background: rgba(255,255,255,0.15);
+      border: solid 1px white;
+      color: #fff;
+      font-size: 16px;
+}
 
+input[type=submit] {
+    margin-top: 20px;
 }
 
 #wrap p {
-        font-size: 50px;
-                -webkit-transition: font-size 0.5s ease;
+    font-size: 50px;
+    -webkit-transition: font-size 0.5s ease;
     -moz-transition: font-size 0.5s ease;
     -o-transition: font-size 0.5s ease;
     transition: font-size 0.5s ease;
-        color: #fff;
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-}
-
-#colorway-list {
-    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #colorway-list li {
@@ -149,22 +150,23 @@ input {
 }
 
 .form a:link, .form a:visited {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 
 .form a:active, .form a:hover {
-    color: #00FFFF;
+    color: #f10a89;
     text-decoration: none;
 }
 
 .fauxbutton {
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 5px;
 }
 
 .form h3 {
     font-size: 20px;
+    margin-bottom: 20px;
 }
 
 #tellus {
@@ -173,6 +175,7 @@ input {
 }
 
 label {
+    display: block;
     font-size: 16px;
     float: left;
 	text-align: right;

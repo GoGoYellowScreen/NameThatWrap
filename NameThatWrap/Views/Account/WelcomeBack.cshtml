@@ -1,0 +1,17 @@
+﻿@using NameThatWrap.data
+@using NameThatWrap.Models
+@model NameThatWrap.data.User
+
+@{
+    ViewBag.Title = "WelcomeBack";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div>
+        @if (Model.LoggedIn == true)
+        {
+        <span>Hello, Welcome @Session["name"]!</span>
+        }
+    </div>
+</body>

@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -19,7 +19,7 @@
           <Key>
             <PropertyRef Name="WrapID" />
           </Key>
-          <Property Name="WrapID" Type="int" Nullable="false" />
+          <Property Name="WrapID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Colorway" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ImgName" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -40,7 +40,7 @@
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
@@ -50,7 +50,7 @@
           <Key>
             <PropertyRef Name="WrapID" />
           </Key>
-          <Property Name="WrapID" Type="Int32" Nullable="false" />
+          <Property Name="WrapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Colorway" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ImgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
