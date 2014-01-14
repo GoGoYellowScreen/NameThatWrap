@@ -18,10 +18,6 @@ namespace NameThatWrap.Controllers
             return View();
         }
 
-        public ActionResult WelcomeBack()
-        {
-            return View();
-        }
 
         [HttpGet]
         public ActionResult SignIn()
@@ -41,9 +37,11 @@ namespace NameThatWrap.Controllers
                 User user = context.Users.Where(u => u.Email == model.Email && u.Password == hashedPassword).SingleOrDefault();
                 if (user == null)
                     return View(model);
-                Session["logged_in"] = true;
-                Session["name"] = model.FirstName;
-                return RedirectToAction("WelcomeBack", "Account");
+                Session["logged_in"] = "true";
+                Session["name"] = user.FirstName;
+                Random rand = new Random();
+                model.WrapID = rand.Next(1,6);
+                return View("WelcomeBack", model);
             }
         }
 
@@ -56,6 +54,8 @@ namespace NameThatWrap.Controllers
         [HttpPost]
         public ActionResult Register(User model)
         {
+            Random rand = new Random();
+            ViewBag.WrapID = rand.Next(1, 6);
             if (ModelState.IsValid)
             {
                 model.Password = model.Password.GetHashCode().ToString();

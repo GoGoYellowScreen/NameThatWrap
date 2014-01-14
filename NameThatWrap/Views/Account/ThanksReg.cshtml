@@ -1,4 +1,5 @@
 ﻿@using NameThatWrap.data
+@using NameThatWrap.Models
 @model NameThatWrap.data.User
 
 @{
@@ -8,5 +9,5 @@
 
 <body>
     <h2>Thank you for registering, @Model.FirstName!</h2>
-    <h2><a href="@Url.Action("Home", "Level?WrapID=1")">Play the game!  >></a></h2>
+    <h2><a href="@Url.Action( "Level", "Home", new {wrapID = @ViewBag.WrapID })">Play the game!  >></a></h2>
 </body>

@@ -1,6 +1,6 @@
 ﻿@using NameThatWrap.data
 @using NameThatWrap.Models
-@model NameThatWrap.data.User
+@model SignInModel
 
 @{
     ViewBag.Title = "WelcomeBack";
@@ -9,9 +9,13 @@
 
 <body>
     <div>
-        @if (Model.LoggedIn == true)
-        {
-        <span>Hello, Welcome @Session["name"]!</span>
-        }
+       @if (Session["logged_in"] == "true")
+       {
+            <h2>Hey, welcome back, @Session["name"]!</h2>
+       }
     </div>
+    <div>
+        <h2><a href="@Url.Action( "Level", "Home", new {wrapID = Model.WrapID })">Play the game!  >></a></h2>
+    </div>
+
 </body>

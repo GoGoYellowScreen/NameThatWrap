@@ -33,7 +33,7 @@ namespace NameThatWrap
 
             routes.MapRoute(
                 name: "LevelRoute",
-                url: "content/level",
+                url: "content/{action}",
                 defaults: new { controller = "Home", action = "Level"}
                 );
 
