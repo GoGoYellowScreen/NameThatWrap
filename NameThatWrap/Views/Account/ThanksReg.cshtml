@@ -7,7 +7,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<body>
-    <h2>Thank you for registering, @Model.FirstName!</h2>
-    <h2><a href="@Url.Action( "Level", "Home", new {wrapID = @ViewBag.WrapID })">Play the game!  >></a></h2>
-</body>
+
+    <div id="content">
+        <h2>Thank you for registering, @Model.FirstName!</h2>
+        <h2><a href="@Url.Action( "Level", "Home", new {wrapID = @ViewBag.WrapID })">Play the game!  >></a></h2>
+    </div><!--end content div-->
+        <div id="bg">
+            <img id="bgimg" src="../../Assets/img/eva.jpg" alt="evacolorway" />
+        </div><!--end bg div-->

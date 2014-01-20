@@ -94,6 +94,7 @@
     <Compile Include="User.cs">
       <DependentUpon>NameThatWrapContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="ValidationModels\User.cs" />
     <Compile Include="Wrap.cs">
       <DependentUpon>NameThatWrapContext.tt</DependentUpon>
     </Compile>

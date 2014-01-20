@@ -7,15 +7,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<body>
-    <div>
-       @if (Session["logged_in"] == "true")
-       {
-            <h2>Hey, welcome back, @Session["name"]!</h2>
-       }
-    </div>
-    <div>
-        <h2><a href="@Url.Action( "Level", "Home", new {wrapID = Model.WrapID })">Play the game!  >></a></h2>
-    </div>
+    <div id="content">
+        <div>
+            @if (Session["logged_in"] == "true")
+            {
+                <h2>Hey, welcome back, @Session["name"]!</h2>
+            }
+        </div>
+        <div>
+            <h2><a href="@Url.Action( "Level", "Home", new {wrapID = Model.WrapID })">Play the game!  >></a></h2>
+        </div>
+    </div><!--end content div-->
+    <div id="bg">
+        <img id="bgimg" src="../../Assets/img/eva.jpg" alt="evacolorway" />
+    </div><!--end bg div-->
 
-</body>

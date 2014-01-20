@@ -13,78 +13,77 @@ namespace NameThatWrap.Controllers
         //
         // GET: /Home/
 
-        public ActionResult Level (int wrapID)
+        public ActionResult Level (int WrapID)
         {
-            WrapModel myVar = GetWrap(wrapID);
-            return View(myVar);
+            NameThatWrapEntities context = new NameThatWrapEntities();
+
+            //var maxWrapID = context.Wraps.OrderByDescending(w => w.WrapID).First(); why is this null?
+            //var maxWrapID = context.Wraps.Max(w => w.WrapID); why is this 0?
+
+            Random rand = new Random();
+            var nextLevelID = rand.Next(1, 51);
+
+            var rightWrap = context.Wraps.Where(w => w.WrapID == WrapID).First();
+            ViewBag.rightWrap = rightWrap;
+
+            var randID = rand.Next(1, 51);
+
+            if (randID == WrapID)
+            {
+                while (randID == WrapID)
+                {
+                    var backupID = rand.Next(1, 51);
+                    randID = backupID;
+                }
+            }
+
+            var wrongWrap = context.Wraps.Where(w => w.WrapID == randID).First();
+            ViewBag.wrongWrap = wrongWrap;
+
+            if (nextLevelID == randID)
+            {
+                while (nextLevelID == randID)
+                {
+                    var extraID = rand.Next(1, 51);
+                    nextLevelID = extraID;
+                }
+            }
+
+            ViewBag.NextLevelWrapID = nextLevelID;
+            var nextLevelWrap = context.Wraps.Where(w => w.WrapID == nextLevelID).First();
+            ViewBag.nextLevelWrap = nextLevelWrap;
+
+            var numCorrect = 0;
+            ViewBag.numCorrect = numCorrect;
+            var numAttempted = 1;
+            ViewBag.numAttempted = numAttempted;
+
+            var coin = rand.Next(1, 3);
+            ViewBag.coin = coin;
+
+            return View(rightWrap);
         }
 
-        public ActionResult Details(int wrapID)
+        public ActionResult YouLose()
         {
-            WrapModel myVar =  GetWrap(wrapID);
-            return View(myVar);
+            Random rand = new Random();
+            ViewBag.WrapID = rand.Next(1, 51);
+            return View();
+        }
+
+        public ActionResult Details(int WrapID)
+        {
+            NameThatWrapEntities context = new NameThatWrapEntities();
+           var model = context.Wraps.Where(w => w.WrapID == WrapID).First();
+            return View(model);
         }
 
         public ActionResult WrapList()
         {
-            WrapListModel myNewVar = new WrapListModel();
-
-            myNewVar.WrapList = new List<WrapModel>();
-
-            WrapModel myWrap = GetWrap(1);
-            myNewVar.WrapList.Add(myWrap);
-
-            WrapModel myWrap2 = GetWrap(2);
-            myNewVar.WrapList.Add(myWrap2);
-
-            WrapModel myWrap3 = GetWrap(3);
-            myNewVar.WrapList.Add(myWrap3);
-
-            WrapModel myWrap4 = GetWrap(4);
-            myNewVar.WrapList.Add(myWrap4);
-
-            WrapModel myWrap5 = GetWrap(5);
-            myNewVar.WrapList.Add(myWrap5);
-
-            return View(myNewVar);
-    }
-
-        private WrapModel GetWrap (int wrapID)
-        {
+            WrapListModel model = new WrapListModel();
             NameThatWrapEntities context = new NameThatWrapEntities();
-            
-            WrapModel myWrap = new WrapModel();
-            switch(wrapID)
-            {
-                case 1:
-                  myWrap.WrapID = 1;
-                  myWrap.ImgName = "pfauhanf2012.jpg";
-                    myWrap.Colorway = "Black Hemp Pfau";
-                        break;
-                case 2:
-                    myWrap.WrapID = 2;
-                    myWrap.ImgName = "hibbiewrap.jpg";
-                    myWrap.Colorway = "Rose Silk Hibiscus";
-                        break;
-                case 3:
-                    myWrap.WrapID = 3;
-                    myWrap.ImgName = "rainbowwrap.jpg";
-                    myWrap.Colorway = "Earthy Rainbow";
-                    break;
-
-                case 4:
-                    myWrap.WrapID = 4;
-                    myWrap.ImgName = "oschamexicachico.jpg";
-                        myWrap.Colorway = "Mexica Xico";
-                    break;
-
-                case 5:
-                    myWrap.WrapID = 5;
-                    myWrap.ImgName = "zauberwald.jpg";
-                    myWrap.Colorway = "Mystic Forest";
-                    break;
-            }
-            return myWrap;
-        }
+            model.WrapList = context.Wraps.ToList();
+            return View(model);
+        } 
     }
 }

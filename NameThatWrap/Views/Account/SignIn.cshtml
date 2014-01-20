@@ -9,8 +9,7 @@
 }
 
 
-<body>
-    <div class="form">
+    <div class="form" id="content">
         <h3>Sign in:</h3>
         @using (Html.BeginForm("SignIn", "Account"))
         {
@@ -20,5 +19,7 @@
             <input type="submit" value="Sign in!" />
 
         }
-    </div>
-</body>
+    </div><!--end form/content div-->
+    <div id="bg">
+        <img id="bgimg" src="../../Assets/img/eva.jpg" alt="evacolorway" />
+    </div><!--end bg div-->

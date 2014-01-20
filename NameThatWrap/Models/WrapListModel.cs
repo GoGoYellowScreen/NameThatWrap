@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using NameThatWrap.data;
 
 namespace NameThatWrap.Models
 {
     public class WrapListModel
     {
-            public List<WrapModel> WrapList { get; set; }
+            public List<Wrap> WrapList { get; set; }
+            public int WrapID { get; set; }
     }
 }

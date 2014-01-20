@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using NameThatWrap.Models;
 using NameThatWrap.data;
+using System.Data.Entity.Validation;
 
 namespace NameThatWrap.Controllers
 {
@@ -40,7 +41,7 @@ namespace NameThatWrap.Controllers
                 Session["logged_in"] = "true";
                 Session["name"] = user.FirstName;
                 Random rand = new Random();
-                model.WrapID = rand.Next(1,6);
+                model.WrapID = rand.Next(1, 51);
                 return View("WelcomeBack", model);
             }
         }
@@ -55,7 +56,7 @@ namespace NameThatWrap.Controllers
         public ActionResult Register(User model)
         {
             Random rand = new Random();
-            ViewBag.WrapID = rand.Next(1, 6);
+            ViewBag.WrapID = rand.Next(1, 51);
             if (ModelState.IsValid)
             {
                 model.Password = model.Password.GetHashCode().ToString();

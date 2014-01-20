@@ -50,30 +50,18 @@ table {
 /*---------------------custom syles---------------------*/
 
 body {
-    background: url(../img/eva.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     font-family: Arial, sans-serif;
     color: #fff;
 }
 
-.quiz {
-  background: no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-
 a:link, a:visited {
     color: #fff;
+    text-decoration: none;
 }
 
 a:active, a:hover {
     color: #f10a89;
+    text-decoration: none;
 }
 
 h1 {
@@ -91,8 +79,9 @@ h1 {
 }
 
 h2 {
-    font-size: 20px;
-    margin: 20px;
+    font-size: 35px;
+    margin: 20px auto;
+    text-align: center;
 }
 
 #title span {
@@ -100,9 +89,6 @@ h2 {
 }
 
 #log-in {
-        /*background: #000000;
-        opacity: .5;*/
-        /*background: rgba(0, 0, 0, 0.5);*/
      padding: 20px;
      max-width: 300px;
      margin: 0 auto;
@@ -117,6 +103,11 @@ input {
 
 input[type=submit] {
     margin-top: 20px;
+}
+
+#wrap {
+    position: relative;
+    z-index: 1;
 }
 
 #wrap p {
@@ -181,6 +172,43 @@ label {
 	text-align: right;
 	margin-right: 15px;
 	width: 130px;
+}
+
+#reply {
+    position: relative;
+    z-index: 1;
+}
+
+#score {
+    position: relative;
+    z-index: 1;
+    font-size: 45px;
+    text-align: center;
+}
+
+#content {
+    position: relative;
+    z-index: 1;
+}
+
+#bgimg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#levelbgimg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
 
 /*---------------------responsive---------------------*/

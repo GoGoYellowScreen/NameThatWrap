@@ -8,10 +8,31 @@
 }
 
 
-<body class="quiz" style="background:url(../img/@Model.ImgName) no-repeat center center fixed; background-size: cover;">
     <div id="wrap">
-        <h1>@Model.Colorway</h1>
+        <h1 id="topchoice">@Model.Colorway</h1>
         <p>or</p>
-        <h1>@Model.Colorway</h1>
+        <h1 id="bottomchoice">@ViewBag.wrongWrap.Colorway</h1>
     </div><!--end wrap div-->
-</body>
+    <div id="bg">
+        <img id="levelbgimg" src="../../Assets/img/@Model.ImgName" alt="wrapcolorway" />
+    </div><!--end bg div-->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#topchoice").click(function () {
+                $("#wrap").replaceWith("<div id=\"reply\"><h1 id=\"correct\">Correct!</h1></div>@*<div id=\"score\">@ViewBag.numCorrect/@ViewBag.numAttempted correct</div>*@")
+
+                setTimeout(function () {
+                    $("body").load("@Url.Action("Level", "Home", new { wrapID = ViewBag.NextLevelWrapID })");
+                }, 3000);
+            });
+            $("#bottomchoice").click(function () {
+                $("#wrap").replaceWith("<div id=\"reply\"><h1 id=\"incorrect\">Nope, it's @Model.Colorway!</h1></div>")
+
+                setTimeout(function () {
+                    $("body").load("@Url.Action("YouLose", "Home")");
+                }, 3000);
+            });
+        });
+    </script>

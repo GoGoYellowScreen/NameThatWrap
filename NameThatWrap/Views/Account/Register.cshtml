@@ -8,8 +8,7 @@
 }
 
 
-<body>
-    <div class="form">
+    <div class="form" id="content">
         <h3>Register:</h3>
         @using(Html.BeginForm("Register", "Account"))
         {
@@ -20,5 +19,7 @@
             <label>Password:</label> @Html.PasswordFor(m => m.Password) @Html.ValidationMessageFor(m => m.Password)<br/>
             <input type="submit" value="Register!"/>
         }
-    </div>
-</body>
+    </div><!--end form/content div-->
+    <div id="bg">
+        <img id="bgimg" src="../../Assets/img/eva.jpg" alt="evacolorway" />
+    </div><!--end bg div-->

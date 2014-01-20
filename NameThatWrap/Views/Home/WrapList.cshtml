@@ -8,21 +8,21 @@
 }
 
 
-<body>
-
-    <div>
+    <div id="content">
         <ul id="colorway-list">
 
-            @foreach(WrapModel wm in Model.WrapList)
+            @foreach(Wrap wm in Model.WrapList)
             { 
 
             <li>@wm.Colorway</li> <!--use a loop, with the li inside the loop, to go through the list-->
              
-            <p><a href="@Url.Action("Details", new {wrapID = wm.WrapID })">Click to view</a></p>   
+            <p><a href="@Url.Action("Details", new {WrapID = wm.WrapID })">Click to view</a></p>   
             }
 
 
 
         </ul>
     </div>
-</body>
+    <div id="bg">
+        <img id="bgimg" src="../../Assets/img/eva.jpg" alt="evacolorway" />
+    </div><!--end bg div-->
