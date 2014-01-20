@@ -59,6 +59,20 @@ namespace NameThatWrap.Controllers
             ViewBag.numAttempted = numAttempted;
 
             var coin = rand.Next(1, 3);
+            if (coin == 1)
+            {
+                ViewBag.TopWrap = rightWrap;
+                ViewBag.BottomWrap = wrongWrap;
+                ViewBag.topchoice = "rightchoice";
+                ViewBag.bottomchoice = "wrongchoice";
+            }
+            else
+            {
+                ViewBag.TopWrap = wrongWrap;
+                ViewBag.BottomWrap = rightWrap;
+                ViewBag.topchoice = "wrongchoice";
+                ViewBag.bottomchoice = "rightchoice";
+            }
             ViewBag.coin = coin;
 
             return View(rightWrap);
