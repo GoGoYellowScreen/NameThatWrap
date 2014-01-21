@@ -7,14 +7,14 @@
 }
 
 
-    <div class="form" id="content">
+    <div id="content">
         <h1 id="title">Name <span>that</span> Wrap</h1>
-        <div id="log-in">
-            <p><a class="fauxbutton" href="@Url.Action("Register", "Account")">Register</a></p>
-            <p><a class="fauxbutton" href="@Url.Action("SignIn", "Account")">Sign In</a></p>
-            <!--<p><a class="fauxbutton" href="@Url.Action("Suggestion", "Feedback")">Suggest a wrap to add</a></p>-->
-        </div><!--end log-in div-->
-    </div><!--end form/content div-->
+        <div id="index-options">
+            <p><a class="button" href="@Url.Action("Register", "Account")">Register</a></p>
+            <p><a class="button" href="@Url.Action("SignIn", "Account")">Sign In</a></p>
+            <p><a class="button" href="@Url.Action("Level", "Home", new { wrapID = @ViewBag.WrapID })">Play without registering</a></p>
+        </div><!--end index-options div-->
+    </div><!--end content div-->
     <div id="bg">
         <img id="bgimg" src="../../Assets/img/eva.jpg" alt="evacolorway" />
     </div><!--end bg div-->

@@ -1,0 +1,10 @@
+C:\NameThatWrap\NameThatWrap.data\bin\Release\NameThatWrap.data.dll.config
+C:\NameThatWrap\NameThatWrap.data\bin\Release\NameThatWrap.data.dll
+C:\NameThatWrap\NameThatWrap.data\bin\Release\NameThatWrap.data.pdb
+C:\NameThatWrap\NameThatWrap.data\bin\Release\EntityFramework.dll
+C:\NameThatWrap\NameThatWrap.data\bin\Release\Newtonsoft.Json.dll
+C:\NameThatWrap\NameThatWrap.data\bin\Release\EntityFramework.xml
+C:\NameThatWrap\NameThatWrap.data\bin\Release\Newtonsoft.Json.xml
+C:\NameThatWrap\NameThatWrap.data\obj\Release\NameThatWrap.data.csprojResolveAssemblyReference.cache
+C:\NameThatWrap\NameThatWrap.data\obj\Release\NameThatWrap.data.dll
+C:\NameThatWrap\NameThatWrap.data\obj\Release\NameThatWrap.data.pdb

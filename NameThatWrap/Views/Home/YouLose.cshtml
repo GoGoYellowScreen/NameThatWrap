@@ -10,7 +10,7 @@
 <div id="content">
     <h1>Oh no, you lose!</h1>
    @* <h2>Thank you for playing, @Model.FirstName!</h2> *@
-    <h2><a href="@Url.Action( "Level", "Home", new {wrapID = @ViewBag.WrapID })">Do you want to play again?  >></a></h2>
+    <h2><a class="button" href="@Url.Action( "Level", "Home", new {wrapID = @ViewBag.WrapID })">Play again</a></h2>
 </div><!--end content div-->
 <div id="bg">
     <img id="bgimg" src="../../Assets/img/eva.jpg" alt="evacolorway" />

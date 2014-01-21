@@ -10,13 +10,12 @@
 
 
     <div class="form" id="content">
-        <h3>Sign in:</h3>
         @using (Html.BeginForm("SignIn", "Account"))
         {
             @Html.ValidationSummary();
-            <label>Email:</label> @Html.TextBoxFor(m => m.Email)<br/>
-            <label>Password:</label> @Html.PasswordFor(m => m.Password)<br/>
-            <input type="submit" value="Sign in!" />
+            <label>Email</label> @Html.TextBoxFor(m => m.Email)
+            <label>Password</label> @Html.PasswordFor(m => m.Password)
+            <input class="button" type="submit" value="Sign in" />
 
         }
     </div><!--end form/content div-->

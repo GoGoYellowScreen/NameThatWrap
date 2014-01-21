@@ -16,6 +16,8 @@ namespace NameThatWrap.Controllers
 
         public ActionResult Index()
         {
+            Random rand = new Random();
+            ViewBag.WrapID = rand.Next(1, 51);
             return View();
         }
 

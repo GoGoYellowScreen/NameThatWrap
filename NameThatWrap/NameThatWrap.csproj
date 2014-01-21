@@ -69,10 +69,6 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -113,7 +109,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\FeedbackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Content Include="Assets\img\argusfabergeqiviut.jpg" />
     <Content Include="Assets\img\argusoz.jpg" />
@@ -168,7 +163,6 @@
     </Compile>
     <Compile Include="Models\LoggedInModel.cs" />
     <Compile Include="Models\SignInModel.cs" />
-    <Compile Include="Models\SuggestionModel.cs" />
     <Compile Include="Models\WrapListModel.cs" />
     <Compile Include="Models\WrapModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -184,7 +178,6 @@
     <Content Include="Assets\img\oschamexicachico.jpg" />
     <Content Include="Assets\img\pfauhanf2012.jpg" />
     <Content Include="Assets\img\rainbowwrap.jpg" />
-    <Content Include="Assets\img\starry_night_blur.jpg" />
     <Content Include="Assets\img\zauberwald.jpg" />
     <Content Include="Views\Home\Level.cshtml">
       <SubType>Code</SubType>
@@ -202,9 +195,6 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -218,9 +208,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Account\Register.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Feedback\Suggestion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NameThatWrap.data\NameThatWrap.data.csproj">
@@ -239,6 +226,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\YouLose.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\namethatwrap.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

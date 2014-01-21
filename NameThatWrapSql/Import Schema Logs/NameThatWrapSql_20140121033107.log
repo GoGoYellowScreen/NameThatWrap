@@ -1,0 +1,71 @@
+1/20/2014 9:31:07 PM	This log contains information about the import schema operation into project 'NameThatWrapSql' on computer 'KATHY-PC' by user 'Kathy'.
+1/20/2014 9:31:07 PM	Import of database schema has started.
+1/20/2014 9:31:18 PM	Gathering database options
+1/20/2014 9:31:18 PM	Gathering users
+1/20/2014 9:31:18 PM	Gathering roles
+1/20/2014 9:31:18 PM	Gathering application roles
+1/20/2014 9:31:18 PM	Gathering role memberships
+1/20/2014 9:31:18 PM	Gathering filegroups
+1/20/2014 9:31:18 PM	Gathering full-text catalogs
+1/20/2014 9:31:18 PM	Gathering assemblies
+1/20/2014 9:31:18 PM	Gathering certificates
+1/20/2014 9:31:18 PM	Gathering asymmetric keys
+1/20/2014 9:31:18 PM	Gathering symmetric keys
+1/20/2014 9:31:18 PM	Gathering encrypted symmetric keys
+1/20/2014 9:31:18 PM	Gathering schemas
+1/20/2014 9:31:18 PM	Gathering XML schema collections
+1/20/2014 9:31:23 PM	Gathering user-defined data types
+1/20/2014 9:31:23 PM	Gathering user-defined types
+1/20/2014 9:31:23 PM	Gathering table types
+1/20/2014 9:31:23 PM	Gathering unique keys for table types
+1/20/2014 9:31:23 PM	Gathering primary keys for table types
+1/20/2014 9:31:23 PM	Gathering check constraints for table types
+1/20/2014 9:31:23 PM	Gathering default constraints for table types
+1/20/2014 9:31:23 PM	Gathering partition functions
+1/20/2014 9:31:23 PM	Gathering partition schemes
+1/20/2014 9:31:23 PM	Gathering functions
+1/20/2014 9:31:23 PM	Gathering encrypted functions
+1/20/2014 9:31:23 PM	Gathering aggregates
+1/20/2014 9:31:23 PM	Gathering procedures
+1/20/2014 9:31:23 PM	Gathering encrypted procedures
+1/20/2014 9:31:23 PM	Gathering tables
+1/20/2014 9:31:23 PM	Gathering primary keys
+1/20/2014 9:31:23 PM	Gathering unique constraints
+1/20/2014 9:31:23 PM	Gathering foreign keys
+1/20/2014 9:31:23 PM	Gathering default constraints
+1/20/2014 9:31:23 PM	Gathering check constraints
+1/20/2014 9:31:23 PM	Gathering views
+1/20/2014 9:31:23 PM	Gathering encrypted views
+1/20/2014 9:31:23 PM	Gathering indexes
+1/20/2014 9:31:23 PM	Gathering statistics
+1/20/2014 9:31:23 PM	Gathering full-text index stoplists
+1/20/2014 9:31:23 PM	Gathering full-text indexes
+1/20/2014 9:31:23 PM	Gathering spatial indexes
+1/20/2014 9:31:23 PM	Gathering XML indexes
+1/20/2014 9:31:23 PM	Gathering encrypted triggers
+1/20/2014 9:31:23 PM	Gathering triggers
+1/20/2014 9:31:23 PM	Gathering encrypted and clr ddl triggers
+1/20/2014 9:31:23 PM	Gathering ddl triggers
+1/20/2014 9:31:23 PM	Gathering synonyms
+1/20/2014 9:31:23 PM	Gathering defaults
+1/20/2014 9:31:23 PM	Gathering data constraint uddt bindings
+1/20/2014 9:31:23 PM	Gathering rules
+1/20/2014 9:31:23 PM	Gathering data constraint uddt bindings
+1/20/2014 9:31:23 PM	Gathering message types
+1/20/2014 9:31:23 PM	Gathering queues
+1/20/2014 9:31:23 PM	Gathering contracts
+1/20/2014 9:31:23 PM	Gathering services
+1/20/2014 9:31:23 PM	Gathering event notifications
+1/20/2014 9:31:23 PM	Gathering remote service bindings
+1/20/2014 9:31:23 PM	Gathering broker priorities
+1/20/2014 9:31:23 PM	Gathering signatures
+1/20/2014 9:31:23 PM	Gathering data compression options
+1/20/2014 9:31:23 PM	Gathering extended properties
+1/20/2014 9:31:24 PM	Gathering credentials
+1/20/2014 9:31:24 PM	Gathering logins
+1/20/2014 9:31:24 PM	Gathering server audits
+1/20/2014 9:31:24 PM	Scanning project for duplicate elements
+1/20/2014 9:31:24 PM	Finished duplicate element processing
+1/20/2014 9:31:24 PM	Finished importing database.
+1/20/2014 9:31:24 PM	A summary of the import was saved to the following location: C:\NameThatWrap\NameThatWrapSql\Import Schema Logs\NameThatWrapSql_20140121033107.log
+1/20/2014 9:31:24 PM	Click Finish to continue...

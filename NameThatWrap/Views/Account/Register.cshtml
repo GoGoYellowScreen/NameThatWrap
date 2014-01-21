@@ -9,15 +9,14 @@
 
 
     <div class="form" id="content">
-        <h3>Register:</h3>
         @using(Html.BeginForm("Register", "Account"))
         {
             @Html.ValidationSummary()
-            <label>First Name:</label> @Html.TextBoxFor(m => m.FirstName) @Html.ValidationMessageFor(m => m.FirstName)<br/>
-            <label>Last Name:</label> @Html.TextBoxFor(m => m.LastName) @Html.ValidationMessageFor(m => m.LastName)<br/>
-            <label>Email:</label> @Html.TextBoxFor(m => m.Email) @Html.ValidationMessageFor(m => m.Email)<br/>
-            <label>Password:</label> @Html.PasswordFor(m => m.Password) @Html.ValidationMessageFor(m => m.Password)<br/>
-            <input type="submit" value="Register!"/>
+            <label>First Name</label> @Html.TextBoxFor(m => m.FirstName) @Html.ValidationMessageFor(m => m.FirstName)
+            <label>Last Name</label> @Html.TextBoxFor(m => m.LastName) @Html.ValidationMessageFor(m => m.LastName)
+            <label>Email</label> @Html.TextBoxFor(m => m.Email) @Html.ValidationMessageFor(m => m.Email)
+            <label>Password</label> @Html.PasswordFor(m => m.Password) @Html.ValidationMessageFor(m => m.Password)
+            <input class="button" type="submit" value="Register"/>
         }
     </div><!--end form/content div-->
     <div id="bg">

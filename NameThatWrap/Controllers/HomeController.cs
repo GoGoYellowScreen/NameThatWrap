@@ -17,8 +17,7 @@ namespace NameThatWrap.Controllers
         {
             NameThatWrapEntities context = new NameThatWrapEntities();
 
-            //var maxWrapID = context.Wraps.OrderByDescending(w => w.WrapID).First(); why is this null?
-            //var maxWrapID = context.Wraps.Max(w => w.WrapID); why is this 0?
+            //var maxWrapID = context.Wraps.Where(w => w.WrapID != 0).Max(w => w.WrapID);
 
             Random rand = new Random();
             var nextLevelID = rand.Next(1, 51);
