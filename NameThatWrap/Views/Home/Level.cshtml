@@ -25,14 +25,14 @@
 
                 setTimeout(function () {
                     $("body").load("@Url.Action("Level", "Home", new { wrapID = ViewBag.NextLevelWrapID })");
-                }, 2000);
+                }, 1000);
             });
             $("#wrongchoice").click(function () {
                 $("#wrap").replaceWith("<div id=\"reply\"><h1 id=\"incorrect\">Nope, it's @Model.Colorway!</h1></div>")
 
                 setTimeout(function () {
                     $("body").load("@Url.Action("YouLose", "Home")");
-                }, 2000);
+                }, 1000);
             });
         });
     </script>

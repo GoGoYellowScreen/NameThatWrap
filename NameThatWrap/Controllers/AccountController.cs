@@ -17,7 +17,7 @@ namespace NameThatWrap.Controllers
         public ActionResult Index()
         {
             Random rand = new Random();
-            ViewBag.WrapID = rand.Next(1, 51);
+            ViewBag.WrapID = rand.Next(1, 76);
             return View();
         }
 
@@ -43,7 +43,7 @@ namespace NameThatWrap.Controllers
                 Session["logged_in"] = "true";
                 Session["name"] = user.FirstName;
                 Random rand = new Random();
-                model.WrapID = rand.Next(1, 51);
+                model.WrapID = rand.Next(1, 76);
                 return View("WelcomeBack", model);
             }
         }
@@ -58,7 +58,7 @@ namespace NameThatWrap.Controllers
         public ActionResult Register(User model)
         {
             Random rand = new Random();
-            ViewBag.WrapID = rand.Next(1, 51);
+            ViewBag.WrapID = rand.Next(1, 76);
             if (ModelState.IsValid)
             {
                 model.Password = model.Password.GetHashCode().ToString();

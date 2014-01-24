@@ -20,18 +20,27 @@ namespace NameThatWrap.Controllers
             //var maxWrapID = context.Wraps.Where(w => w.WrapID != 0).Max(w => w.WrapID);
 
             Random rand = new Random();
-            var nextLevelID = rand.Next(1, 51);
+            var nextLevelID = rand.Next(1, 76);
+
+            if (nextLevelID == WrapID)
+            {
+                while (nextLevelID == WrapID)
+                {
+                    var anotherID = rand.Next(1, 76);
+                    nextLevelID = anotherID;
+                }
+            }
 
             var rightWrap = context.Wraps.Where(w => w.WrapID == WrapID).First();
             ViewBag.rightWrap = rightWrap;
 
-            var randID = rand.Next(1, 51);
+            var randID = rand.Next(1, 76);
 
             if (randID == WrapID)
             {
                 while (randID == WrapID)
                 {
-                    var backupID = rand.Next(1, 51);
+                    var backupID = rand.Next(1, 76);
                     randID = backupID;
                 }
             }
@@ -43,7 +52,7 @@ namespace NameThatWrap.Controllers
             {
                 while (nextLevelID == randID)
                 {
-                    var extraID = rand.Next(1, 51);
+                    var extraID = rand.Next(1, 76);
                     nextLevelID = extraID;
                 }
             }
@@ -80,7 +89,7 @@ namespace NameThatWrap.Controllers
         public ActionResult YouLose()
         {
             Random rand = new Random();
-            ViewBag.WrapID = rand.Next(1, 51);
+            ViewBag.WrapID = rand.Next(1, 76);
             return View();
         }
 

@@ -97,22 +97,22 @@ a:active, a:hover {
 }
 
 h1 {
-   font-size: 50px;
+   font-size: 42px;
     -webkit-transition: font-size 0.5s ease;
     -moz-transition: font-size 0.5s ease;
     -o-transition: font-size 0.5s ease;
     transition: font-size 0.5s ease;
     line-height: 1.25;
-    width: 80%;
+    width: 90%;
     margin: 40px auto;
     text-align: center;
 
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 24px;
     line-height: 1.5;
-    margin: 20px auto;
+    margin: 50px auto;
     text-align: center;
 }
 
@@ -194,10 +194,14 @@ input[type=submit] {
 
 h1 {
     font-size: 75px;
-    line-height: 1;
+    line-height: 1.25;
     width: 80%;
-    margin: 80px auto;
+    margin: 72px auto;
 
+}
+
+h2 {
+    font-size: 36px;
 }
 
 #title span {
@@ -228,7 +232,7 @@ input[type=submit] {
 
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
 
 h1 {
         font-size: 100px;
