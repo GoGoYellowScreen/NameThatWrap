@@ -31,21 +31,26 @@ namespace NameThatWrap.Controllers
         [HttpPost]
         public ActionResult SignIn(SignInModel model)
          {
-            if (!ModelState.IsValid)
-                return View(model);
-            else
-            {
-                NameThatWrapEntities context = new NameThatWrapEntities();
-                string hashedPassword = model.Password.GetHashCode().ToString();
-                User user = context.Users.Where(u => u.Email == model.Email && u.Password == hashedPassword).SingleOrDefault();
-                if (user == null)
-                    return View(model);
-                Session["logged_in"] = "true";
-                Session["name"] = user.FirstName;
-                Random rand = new Random();
-                model.WrapID = rand.Next(1, 76);
-                return View("WelcomeBack", model);
-            }
+             if (!ModelState.IsValid)
+             {
+                 return View(model);
+             }
+             else
+             {
+                 NameThatWrapEntities context = new NameThatWrapEntities();
+                 string hashedPassword = model.Password.GetHashCode().ToString();
+                 User user = context.Users.Where(u => u.Email == model.Email && u.Password == hashedPassword).SingleOrDefault();
+                 if (user == null)
+                 {
+                     ModelState.AddModelError("", "Incorrect email or password");
+                     return View(model);
+                 }
+                 Session["logged_in"] = "true";
+                 Session["name"] = user.FirstName;
+                 Random rand = new Random();
+                 model.WrapID = rand.Next(1, 76);
+                 return View("WelcomeBack", model);
+             }
         }
 
         [HttpGet]

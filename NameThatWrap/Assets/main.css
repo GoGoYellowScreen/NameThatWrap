@@ -169,6 +169,20 @@ input[type=submit] {
     padding: 10px;
 }
 
+.validation-summary-errors li {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #fef906;
+}
+
+.field-validation-error {
+    display: none;
+}
+
+.input-validation-error {
+    border: solid 2px #fef906;
+}
+
 #wrap {
     position: relative;
     z-index: 1;

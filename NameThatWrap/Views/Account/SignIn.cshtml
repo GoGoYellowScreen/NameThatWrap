@@ -1,7 +1,7 @@
 ﻿@using NameThatWrap.Models;
 @using NameThatWrap.data;
 
-@model NameThatWrap.data.User
+@model SignInModel
 
 @{
     ViewBag.Title = "SignIn";
@@ -13,8 +13,9 @@
         @using (Html.BeginForm("SignIn", "Account"))
         {
             @Html.ValidationSummary();
-            <label>Email</label> @Html.TextBoxFor(m => m.Email)
-            <label>Password</label> @Html.PasswordFor(m => m.Password)
+            <label>Email</label> @Html.TextBoxFor(m => m.Email) @Html.ValidationMessageFor(m => m.Email)
+            <label>Password</label> @Html.PasswordFor(m => m.Password) @Html.ValidationMessageFor(m => m.Password)
+            <p>@ViewBag.ErrorMessage</p>
             <input class="button" type="submit" value="Sign in" />
 
         }
