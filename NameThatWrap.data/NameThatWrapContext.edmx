@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="NameThatWrapModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="NameThatWrapModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserId" />
@@ -17,21 +17,23 @@
         </EntityType>
         <EntityType Name="Wrap">
           <Key>
-            <PropertyRef Name="WrapID" />
+            <PropertyRef Name="WrapNum" />
           </Key>
-          <Property Name="WrapID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WrapNum" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Colorway" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ImgName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Date_created" Type="datetime2" Precision="7" />
           <Property Name="Date_updated" Type="datetime2" Precision="7" />
           <Property Name="Author" Type="nvarchar" MaxLength="50" />
+          <Property Name="WrapID" Type="int" />
         </EntityType>
         <EntityContainer Name="NameThatWrapModelStoreContainer">
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Wrap" EntityType="Self.Wrap" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="NameThatWrapModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -47,17 +49,18 @@
         </EntityType>
         <EntityType Name="Wrap">
           <Key>
-            <PropertyRef Name="WrapID" />
+            <PropertyRef Name="WrapNum" />
           </Key>
-          <Property Name="WrapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WrapNum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Colorway" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ImgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Date_created" Type="DateTime" Precision="7" />
           <Property Name="Date_updated" Type="DateTime" Precision="7" />
           <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WrapID" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="NameThatWrapEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="NameThatWrapEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="Self.User" />
           <EntitySet Name="Wraps" EntityType="Self.Wrap" />
         </EntityContainer>
@@ -66,7 +69,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="NameThatWrapModelStoreContainer" CdmEntityContainer="NameThatWrapEntities">
+        <EntityContainerMapping StorageEntityContainer="NameThatWrapModelStoreContainer" CdmEntityContainer="NameThatWrapEntities1">
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="NameThatWrapModel.User">
               <MappingFragment StoreEntitySet="User">
@@ -81,13 +84,14 @@
           <EntitySetMapping Name="Wraps">
             <EntityTypeMapping TypeName="NameThatWrapModel.Wrap">
               <MappingFragment StoreEntitySet="Wrap">
-                <ScalarProperty Name="WrapID" ColumnName="WrapID" />
+                <ScalarProperty Name="WrapNum" ColumnName="WrapNum" />
                 <ScalarProperty Name="Colorway" ColumnName="Colorway" />
                 <ScalarProperty Name="Brand" ColumnName="Brand" />
                 <ScalarProperty Name="ImgName" ColumnName="ImgName" />
                 <ScalarProperty Name="Date_created" ColumnName="Date_created" />
                 <ScalarProperty Name="Date_updated" ColumnName="Date_updated" />
                 <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="WrapID" ColumnName="WrapID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

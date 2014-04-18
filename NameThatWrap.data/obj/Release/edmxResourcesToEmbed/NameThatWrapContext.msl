@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="NameThatWrapModelStoreContainer" CdmEntityContainer="NameThatWrapEntities">
+  <EntityContainerMapping StorageEntityContainer="NameThatWrapModelStoreContainer" CdmEntityContainer="NameThatWrapEntities1">
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="NameThatWrapModel.User">
         <MappingFragment StoreEntitySet="User">
@@ -15,13 +15,14 @@
     <EntitySetMapping Name="Wraps">
       <EntityTypeMapping TypeName="NameThatWrapModel.Wrap">
         <MappingFragment StoreEntitySet="Wrap">
-          <ScalarProperty Name="WrapID" ColumnName="WrapID" />
+          <ScalarProperty Name="WrapNum" ColumnName="WrapNum" />
           <ScalarProperty Name="Colorway" ColumnName="Colorway" />
           <ScalarProperty Name="Brand" ColumnName="Brand" />
           <ScalarProperty Name="ImgName" ColumnName="ImgName" />
           <ScalarProperty Name="Date_created" ColumnName="Date_created" />
           <ScalarProperty Name="Date_updated" ColumnName="Date_updated" />
           <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="WrapID" ColumnName="WrapID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

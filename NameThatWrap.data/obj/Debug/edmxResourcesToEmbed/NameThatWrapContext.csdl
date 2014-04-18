@@ -12,17 +12,18 @@
   </EntityType>
   <EntityType Name="Wrap">
     <Key>
-      <PropertyRef Name="WrapID" />
+      <PropertyRef Name="WrapNum" />
     </Key>
-    <Property Name="WrapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WrapNum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Colorway" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ImgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Date_created" Type="DateTime" Precision="7" />
     <Property Name="Date_updated" Type="DateTime" Precision="7" />
     <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WrapID" Type="Int32" />
   </EntityType>
-  <EntityContainer Name="NameThatWrapEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="NameThatWrapEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Users" EntityType="Self.User" />
     <EntitySet Name="Wraps" EntityType="Self.Wrap" />
   </EntityContainer>

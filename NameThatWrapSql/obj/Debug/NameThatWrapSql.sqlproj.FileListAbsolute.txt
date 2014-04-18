@@ -1,0 +1,9 @@
+C:\NameThatWrap\NameThatWrapSql\bin\Debug\NameThatWrapSql.dacpac
+C:\NameThatWrap\NameThatWrapSql\bin\Debug\NameThatWrapSql.dll
+C:\NameThatWrap\NameThatWrapSql\bin\Debug\NameThatWrapSql.pdb
+C:\NameThatWrap\NameThatWrapSql\obj\Debug\Model.xml
+C:\NameThatWrap\NameThatWrapSql\obj\Debug\refactor.xml
+C:\NameThatWrap\NameThatWrapSql\obj\Debug\postdeploy.sql
+C:\NameThatWrap\NameThatWrapSql\obj\Debug\predeploy.sql
+C:\NameThatWrap\NameThatWrapSql\obj\Debug\NameThatWrapSql.dll
+C:\NameThatWrap\NameThatWrapSql\obj\Debug\NameThatWrapSql.pdb
