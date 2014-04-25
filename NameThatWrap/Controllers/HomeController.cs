@@ -16,17 +16,16 @@ namespace NameThatWrap.Controllers
         public ActionResult Level (int WrapID)
         {
             NameThatWrapEntities context = new NameThatWrapEntities();
-
-            //var maxWrapID = context.Wraps.Where(w => w.WrapID != 0).Max(w => w.WrapID);
+            var maxValue = (context.Wraps.Max(x => x.WrapID) ?? default(int)) + 1;
 
             Random rand = new Random();
-            var nextLevelID = rand.Next(1, 112);
+            var nextLevelID = rand.Next(1, maxValue);
 
             if (nextLevelID == WrapID)
             {
                 while (nextLevelID == WrapID)
                 {
-                    var anotherID = rand.Next(1, 112);
+                    var anotherID = rand.Next(1, maxValue);
                     nextLevelID = anotherID;
                 }
             }
@@ -34,13 +33,13 @@ namespace NameThatWrap.Controllers
             var rightWrap = context.Wraps.Where(w => w.WrapID == WrapID).First();
             ViewBag.rightWrap = rightWrap;
 
-            var randID = rand.Next(1, 112);
+            var randID = rand.Next(1, maxValue);
 
             if (randID == WrapID)
             {
                 while (randID == WrapID)
                 {
-                    var backupID = rand.Next(1, 112);
+                    var backupID = rand.Next(1, maxValue);
                     randID = backupID;
                 }
             }
@@ -52,7 +51,7 @@ namespace NameThatWrap.Controllers
             {
                 while (nextLevelID == randID)
                 {
-                    var extraID = rand.Next(1, 112);
+                    var extraID = rand.Next(1, maxValue);
                     nextLevelID = extraID;
                 }
             }
@@ -88,8 +87,11 @@ namespace NameThatWrap.Controllers
 
         public ActionResult YouLose()
         {
+            NameThatWrapEntities context = new NameThatWrapEntities();
+            var maxValue2 = (context.Wraps.Max(x => x.WrapID) ?? default(int)) + 1;
+
             Random rand = new Random();
-            ViewBag.WrapID = rand.Next(1, 112);
+            ViewBag.WrapID = rand.Next(1, maxValue2);
             return View();
         }
 

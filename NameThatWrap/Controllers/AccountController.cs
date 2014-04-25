@@ -16,8 +16,11 @@ namespace NameThatWrap.Controllers
 
         public ActionResult Index()
         {
+            NameThatWrapEntities context = new NameThatWrapEntities();
+            var maxValue3 = (context.Wraps.Max(x => x.WrapID) ?? default(int)) + 1;
+
             Random rand = new Random();
-            ViewBag.WrapID = rand.Next(1, 112);
+            ViewBag.WrapID = rand.Next(1, maxValue3);
             return View();
         }
 
@@ -31,6 +34,8 @@ namespace NameThatWrap.Controllers
         [HttpPost]
         public ActionResult SignIn(SignInModel model)
          {
+
+
              if (!ModelState.IsValid)
              {
                  return View(model);
@@ -38,6 +43,7 @@ namespace NameThatWrap.Controllers
              else
              {
                  NameThatWrapEntities context = new NameThatWrapEntities();
+                 var maxValue4 = (context.Wraps.Max(x => x.WrapID) ?? default(int)) + 1;
                  string hashedPassword = model.Password.GetHashCode().ToString();
                  User user = context.Users.Where(u => u.Email == model.Email && u.Password == hashedPassword).SingleOrDefault();
                  if (user == null)
@@ -48,7 +54,7 @@ namespace NameThatWrap.Controllers
                  Session["logged_in"] = "true";
                  Session["name"] = user.FirstName;
                  Random rand = new Random();
-                 model.WrapID = rand.Next(1, 112);
+                 model.WrapID = rand.Next(1, maxValue4);
                  return View("WelcomeBack", model);
              }
         }
@@ -62,12 +68,14 @@ namespace NameThatWrap.Controllers
         [HttpPost]
         public ActionResult Register(User model)
         {
+            NameThatWrapEntities context = new NameThatWrapEntities();
+            var maxValue5 = (context.Wraps.Max(x => x.WrapID) ?? default(int)) + 1;
+
             Random rand = new Random();
-            ViewBag.WrapID = rand.Next(1, 112);
+            ViewBag.WrapID = rand.Next(1, maxValue5);
             if (ModelState.IsValid)
             {
                 model.Password = model.Password.GetHashCode().ToString();
-                NameThatWrapEntities context = new NameThatWrapEntities();
                 context.Users.Add(model);
                 context.SaveChanges();
                 return View("ThanksReg", model);
